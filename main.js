@@ -13,15 +13,15 @@ renderrer.setSize(window.innerWidth, window.innerHeight);
 
 renderrer.render(scene, camera);
 
-const geometry = new THREE.TorusGeometry(10, 1.5, 16, 100);
-const material = new THREE.MeshStandardMaterial({color: 0x487db5});
+const geometry = new THREE.TorusGeometry(8, 1.5, 16, 100);
+const material = new THREE.MeshStandardMaterial({color: 0x4392dd});
 const torus = new THREE.Mesh(geometry, material);
 
 scene.add(torus)
 
 
 
-const logotexture = new THREE.TextureLoader().load('/threejs/image/squair403x403.jpg');
+const logotexture = new THREE.TextureLoader().load('https://squairyt.github.io/threejs/image/squair403x403.jpg');
 const logo = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
   new THREE.MeshBasicMaterial({map: logotexture})
@@ -31,7 +31,7 @@ const logo = new THREE.Mesh(
 scene.add(logo);
 
 
-const pointLight = new THREE.PointLight(0xcfcfcf, 100);
+const pointLight = new THREE.PointLight(0xcfcfcf);
 pointLight.position.set(0,0,0)
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(ambientLight, pointLight)
@@ -54,7 +54,7 @@ function stars(){
 Array(200).fill().forEach(stars)
 
 
-const spaceTexture = new THREE.TextureLoader().load('/threejs/image/space_pic.jpg');
+const spaceTexture = new THREE.TextureLoader().load('https://squairyt.github.io/threejs/image/space_pic.jpg');
 scene.background = spaceTexture;
 
 
@@ -77,7 +77,7 @@ function moveCamera(){
   logo.rotation.z += 0.06;
 
   camera.position.z = t*-0.01;
-  camera.position.x = t*-0.0002;
+  camera.position.x = t*0.0005;
   camera.position.y = t*-0.0002;
 }
 document.body.onscroll = moveCamera

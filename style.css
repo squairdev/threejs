@@ -4,7 +4,9 @@ canvas {
   left: 0;
 }
 
-
+body{
+  overflow-x: hidden;
+}
 :root {
   --dark-bg: rgba(15, 15, 15, 0.55);
   --spacing: 210px;
@@ -14,7 +16,10 @@ canvas {
   font-style: normal;
 }
 
-
+a{
+  text-decoration: none;
+  color:paleturquoise;
+}
 main {
   width: 100vw;
   color: white;
@@ -34,46 +39,47 @@ h1, h2, h3, blockquote {
   font-style: normal;
 }
 
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
+header {
+  transform: translateX(25vw);
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  background: var(--dark-bg);
+  grid-column: 2 / span 4;
+  font-size: 1.5rem;
+  padding: 2rem;
+  margin-bottom: var(--spacing);
 }
 
+section {
+  border-radius: 15px;
+  grid-column: 2 / 6;
+  padding: 1rem;
+  background: var(--dark-bg);
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-bottom: var(--spacing);
+}
 
+blockquote {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  margin-bottom: var(--spacing);
+}
 
-  header {
-    background: var(--dark-bg);
-    grid-column: 2 / span 5;
-    font-size: 1rem;
-    padding: 2rem;
-    margin-bottom: var(--spacing);
-  }
+blockquote p {
+  font-style: normal;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  background-color: rgba(93, 31, 143, 0.267);
+  font-size: 2rem;
+  display: inline;
+  line-height: 1;
+}
 
-  section {
-    grid-column: 2 / 6;
-    padding: 1rem;
-    background: var(--dark-bg);
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: var(--spacing);
-  }
-
-  blockquote {
-    margin: 0;
-    padding: 0;
-    grid-column: 2 / span 9;
-    margin-bottom: var(--spacing);
-  }
-
-  blockquote p {
-    color: rgb(0, 0, 0);
-    background-color: rgba(111, 72, 143, 0.75);
-    font-size: 2rem;
-    display: inline;
-    line-height: 1;
-  }
-
-  .left {
-    grid-column: 6 / 12;
-  }
+.left {
+  grid-column: 6 / 12;
+}
