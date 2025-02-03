@@ -21,7 +21,7 @@ scene.add(torus)
 
 
 
-const logotexture = new THREE.TextureLoader().load('https://squairyt.github.io/threejs/image/squair403x403.jpg');
+const logotexture = new THREE.TextureLoader().load('https://squairdev.github.io/threejs/image/squair403x403.jpg');
 const logo = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
   new THREE.MeshBasicMaterial({map: logotexture})
@@ -54,7 +54,7 @@ function stars(){
 Array(200).fill().forEach(stars)
 
 
-const spaceTexture = new THREE.TextureLoader().load('https://squairyt.github.io/threejs/image/space_pic.jpg');
+const spaceTexture = new THREE.TextureLoader().load('https://squairdev.github.io/threejs/image/space_pic.jpg');
 scene.background = spaceTexture;
 
 

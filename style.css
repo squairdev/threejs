@@ -81,5 +81,5 @@ blockquote p {
 }
 
 .left {
-  grid-column: 6 / 12;
+  grid-column: 2 / 6;
 }
